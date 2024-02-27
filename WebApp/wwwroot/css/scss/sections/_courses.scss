@@ -1,0 +1,39 @@
+#courses {
+
+    .grid {
+         display: grid;
+         @include md {
+            grid-template-columns: repeat(2, 1fr);
+         }
+         @include lg {
+            grid-template-columns: repeat(3, 1fr);
+         }
+         gap: 2rem 1rem;
+    }
+
+    .course-card {
+        .price {
+            color: $theme;
+            font-weight: 700;
+        }
+
+        &_footer {
+            padding-top: 0;
+            gap: 2rem;
+            color: $gray-600;
+
+            &, * {
+                display: flex;
+                align-items: center;
+            }
+
+            div {
+                gap: .5rem;
+            }
+
+            p {
+                margin: 0;
+            }
+        }
+    }
+}
